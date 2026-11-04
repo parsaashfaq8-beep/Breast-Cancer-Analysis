@@ -69,7 +69,7 @@ def add_styles():
 
 @st.cache_data(show_spinner="Loading patient records…")
 def load_data():
-    csv_path = Path(__file__).resolve().parent / "Breast_Cancer.csv"
+    csv_path = Path(__file__).resolve().parent / "Breast_cancer.csv"
     if not csv_path.exists():
         raise FileNotFoundError(f"Dataset not found beside the dashboard: {csv_path}")
     df = pd.read_csv(csv_path)
