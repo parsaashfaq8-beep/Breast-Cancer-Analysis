@@ -340,7 +340,7 @@ def main():
         selected_stages = st.multiselect("Cancer stage", stages, default=stages)
         statuses = sorted(data["status"].dropna().unique().tolist())
         selected_statuses = st.multiselect("Patient status", statuses, default=statuses)
-        st.markdown("<div class='footnote'>Source: Breast_Cancer.csv<br>Exact duplicates removed; text whitespace trimmed.</div>", unsafe_allow_html=True)
+        st.markdown("<div class='footnote'>Source: Breast_cancer.csv<br>Exact duplicates removed; text whitespace trimmed.</div>", unsafe_allow_html=True)
 
     filtered = data[
         data["age_group"].astype(str).isin(selected_ages)
@@ -366,7 +366,7 @@ def main():
     else:
         render_insights(data, filtered)
 
-    st.markdown("<div class='footnote'>Data source: Breast_Cancer.csv · Descriptive analytics for academic exploration.</div>", unsafe_allow_html=True)
+    st.markdown("<div class='footnote'>Data source: Breast_cancer.csv · Descriptive analytics for academic exploration.</div>", unsafe_allow_html=True)
 
 
 if __name__ == "__main__":
